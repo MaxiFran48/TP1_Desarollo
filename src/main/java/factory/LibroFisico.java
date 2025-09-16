@@ -1,11 +1,5 @@
 package main.java.factory;
 
-
-import lombok.Getter;
-import lombok.ToString;
-
-@ToString
-@Getter
 public class LibroFisico implements Libro {
 
     private String titulo;
@@ -15,9 +9,19 @@ public class LibroFisico implements Libro {
         this.titulo = titulo;
     }
 
+    public String getTitulo() {
+        return titulo;
+    }
+
     /**Getter de la clase**/
     public String getTipo() {
         return "Fisico";
+    }
+
+    /**Metodo que nos permite mostrar los libros**/
+    @Override
+    public String toString() {
+        return getTitulo() + " (" + getTipo() + ")";
     }
 
 }
